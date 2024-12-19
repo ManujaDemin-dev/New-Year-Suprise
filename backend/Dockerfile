@@ -1,0 +1,13 @@
+FROM python:3.13
+
+WORKDIR /backend
+
+COPY ./requirements.txt /backend/requirements.txt
+
+RUN pip install --no-cache-dir --upgrade -r /backend/requirements.txt
+
+COPY ./app /backend/app
+
+EXPOSE 80
+
+CMD ["fastapi", "run", "app/main.py", "--port", "80"]
