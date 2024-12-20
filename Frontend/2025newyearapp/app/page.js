@@ -7,6 +7,9 @@ export default function Home() {
   return (
     <div>
       {/* <Title/> not working  */}
+      <h1>
+        Welcome to my website!
+      </h1>
       <Countdown />
       <SnowEffect />
     </div>

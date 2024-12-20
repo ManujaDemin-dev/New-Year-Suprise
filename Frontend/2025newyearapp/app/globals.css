@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,4 +21,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  position: absolute;            /* Position it absolutely on the page */
+  top: 50%;                      /* Vertically centered */
+  left: 50%;                     /* Horizontally centered */
+  transform: translate(-50%, -50%);  /* Exact centering */
+  color: white;                  /* Make sure it's visible on dark backgrounds */
+  z-index: 10;                   /* Ensure it stays on top */
+}
 

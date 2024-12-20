@@ -35,7 +35,7 @@ const Countdown = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Countdown To New Year 2025</h1>
+      {/* <h1 className={styles.heading}>Countdown To New Year 2025</h1> */}
       <div className={styles.timer}>{timeLeft}</div>
     </div>
   );
