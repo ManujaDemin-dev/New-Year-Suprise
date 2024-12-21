@@ -14,16 +14,42 @@
     --foreground: #ededed;
   }
 }
+body {
+  margin: 0;
+  background-image: url("/background (1).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep it fixed while scrolling */
+}
 
+.poppins_head{
+  font-family: var(--font-poppins);
+  font-weight: 800;
+  font-size: 180px;
+
+}
+
+.poppins_title{
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 36px;
+  margin-top: -110px;
+
+}
+
+/* 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+   */
 
 h1 {
   position: absolute;            /* Position it absolutely on the page */
-  top: 50%;                      /* Vertically centered */
+  top: 50%;
+                        /* Vertically centered */
   left: 50%;                     /* Horizontally centered */
   transform: translate(-50%, -50%);  /* Exact centering */
   color: white;                  /* Make sure it's visible on dark backgrounds */
