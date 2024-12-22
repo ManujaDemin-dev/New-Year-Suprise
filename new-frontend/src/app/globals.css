@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-image: url('/background.svg');
+  --footer-color: #212529;
+  --primary-color: #013F9E;
+  --secondary-color: #F1F1F1;
+  --button-color: #005BE7;
+}
+
+/* 
+Overwrite
+*/
+
+a {
+  color: var(--button-color);
+  text-decoration: underline;
+}
+
+/* 
+Styles
+*/
+
+body {
+  background: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.timer-card-body {
+  height: 170px;
+  background-color: var(--secondary-color);
+}
+
+.timer-card-footer {
+  height: 50px;
+  background-color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--footer-color);
+}
+
+/* 
+Components
+*/
+
+.footer-link-white {
+  color: white !important;
+  text-decoration: none !important;
+}
