@@ -8,7 +8,10 @@ app = FastAPI()
 origins = [
     "http://localhost",            # For local development
     "http://localhost:3000",       # Frontend on a different port
-    "https://wishcraft.ravinath.dev"  # Deployed frontend domain
+    "http://64.227.46.49",         # Deployed IP address
+    "https://64.227.46.49",        # Deployed IP address
+    "https://wishcraft.ravinath.dev",  # Deployed frontend domain
+    "http://wishcraft.ravinath.dev"
 ]
 
 app.add_middleware(

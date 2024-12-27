@@ -6,3 +6,4 @@
 /backend/app/schemas/__pycache__/
 
 docker-compose.yml
+.DS_Store
