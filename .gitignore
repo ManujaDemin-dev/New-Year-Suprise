@@ -4,3 +4,5 @@
 /backend/app/routes/__pycache__/
 /backend/app/__pycache__/
 /backend/app/schemas/__pycache__/
+
+docker-compose.yml

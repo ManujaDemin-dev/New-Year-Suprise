@@ -1,0 +1,19 @@
+services:
+  backend:
+      build:
+        context: ./backend
+        dockerfile: Dockerfile
+      environment:
+        - SUPABASE_URL=
+        - SUPABASE_SERVICE_KEY=
+      ports:
+        - "8081:80"
+        
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
