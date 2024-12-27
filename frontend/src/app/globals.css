@@ -14,10 +14,7 @@
 Overwrite
 */
 
-a {
-  color: var(--button-color);
-  text-decoration: underline;
-}
+
 
 /* 
 Styles
@@ -50,4 +47,14 @@ Components
 .footer-link-white {
   color: white !important;
   text-decoration: none !important;
+}
+
+.create-wish-link {
+  background-color: transparent !important;
+  color: var(--button-color);
+  text-decoration: underline;
+}
+
+.copy-link {
+  color: var(--button-color) !important;
 }

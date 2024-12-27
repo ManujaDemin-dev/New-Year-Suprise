@@ -41,7 +41,7 @@ def get_wish_from_id(wish_id):
     status_code=status.HTTP_201_CREATED
 )
 def create_wish(wish_wrapper: wish.WishWrapper):
-    wish_id = shortuuid.uuid()
+    wish_id = shortuuid.ShortUUID().random(length=5)
 
     new_wish = wish.Wish(id=wish_id, name=wish_wrapper.name)
     body_json = json.loads(new_wish.json())

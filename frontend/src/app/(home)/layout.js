@@ -1,7 +1,8 @@
 import { Poppins } from "next/font/google";
 import "../globals.css";
-import Link from "next/link";
-import Footer from "../components/Footer";
+import { Providers } from "../providers";
+import SnowEffect from "../components/SnowEffect";
+import { Toaster } from "react-hot-toast";
 
 const Poppins_init = Poppins({
   subsets: ["latin"],
@@ -18,9 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${Poppins_init.variable} antialiased`}>
-        {children}
-
-        <Footer />
+        <Providers>
+          <SnowEffect />
+          <Toaster position="bottom-center" />
+          {children}
+        </Providers>
       </body>
     </html>
   );

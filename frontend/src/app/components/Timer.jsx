@@ -33,7 +33,7 @@ const Timer = ({ className }) => {
   }, []);
 
   return (
-    <div className={`flex flex-col gap-14 md:flex-row md:gap-24 ${className}`}>
+    <div className={`flex flex-col gap-14 md:flex-row md:gap-29 ${className}`}>
         <TimerCard time={timeLeft.days} segment="Days" />
         <TimerCard time={timeLeft.hours} segment="Hours" />
         <TimerCard time={timeLeft.minutes} segment="Minutes" />
@@ -44,7 +44,7 @@ const Timer = ({ className }) => {
 
 const TimerCard = ({time, segment}) => {
   return (
-    <div className="rounded-lg shadow-xl w-[170]">
+    <div className="rounded-lg shadow-xl w-[170px]">
       <div className="timer-card-body rounded-t-lg flex justify-center items-center">
         <p className="text-8xl font-medium">{time}</p>
       </div>
