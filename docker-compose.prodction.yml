@@ -4,6 +4,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     environment:
+      - PYTHONPATH=/backend
       - APP_ENV=development
       - SUPABASE_URL=
       - SUPABASE_SERVICE_KEY=
@@ -47,22 +48,19 @@ services:
       - ./certs:/etc/letsencrypt
       - ./certs-data:/data/letsencrypt
       - ./webroot:/var/www/certbot
-    environment:
-      - DOMAIN=
-      - EMAIL=
-    # Run this before you start all of the services
+    # Create the SSL Certificate
     # command: >
-    #   certonly --webroot
-    #   --webroot-path=/var/www/certbot
-    #   --email ${EMAIL}
-    #   --agree-tos
-    #   --no-eff-email
-    #   -d ${DOMAIN}
-    #   -d www.${DOMAIN}
+      # certonly --webroot
+      # --webroot-path=/var/www/certbot
+      # --email ${EMAIL}
+      # --agree-tos
+      # --no-eff-email
+      # -d ${DOMAIN}
+      # -d www.${DOMAIN}
     entrypoint: /bin/sh -c "trap exit TERM; while :; do certbot renew --webroot-path=/var/www/certbot && sleep 12h; done"
     networks:
       - wishcraft-network
-  
+
 networks:
   wishcraft-network:
     driver: bridge

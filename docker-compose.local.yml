@@ -1,0 +1,43 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - PYTHONPATH=/backend
+      - APP_ENV=development
+      - SUPABASE_URL=
+      - SUPABASE_SERVICE_KEY=
+    expose:
+      - "8000"
+    networks:
+      - wishcraft-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    expose:
+      - "3000"
+    networks:
+      - wishcraft-network
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.local
+    depends_on:
+      - backend
+      - frontend
+    ports:
+      - "80:80"
+    networks:
+      - wishcraft-network
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+
+networks:
+  wishcraft-network:
+    driver: bridge

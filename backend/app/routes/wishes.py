@@ -1,8 +1,8 @@
 import json
 import shortuuid
 from fastapi import APIRouter, status
-from schemas import wish
-from supabase_client import supabase
+from app.schemas import wish
+from app.supabase_client import supabase
 
 router = APIRouter(
     prefix='/wishes',

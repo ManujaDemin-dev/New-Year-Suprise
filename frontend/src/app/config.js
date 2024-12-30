@@ -1,7 +1,7 @@
 const ENVIRONMENT = "DEV";
 
 const config = {
-  BASE_API_URL: "http://backend/api/v1",
+  BASE_API_URL: "http://backend:8000/api/v1",
 
   FRONTEND_URL:
     ENVIRONMENT === "DEV"
@@ -11,7 +11,7 @@ const config = {
   BASE_API_URL_DOCKER:
     ENVIRONMENT === "DEV"
       ? "http://localhost:8081/api/v1"
-      : "https://64.227.46.49/api/v1",
+      : "https://wishcraft.ravinath.online/api/v1",
 };
 
 export default config;

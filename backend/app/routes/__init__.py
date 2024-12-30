@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from routes import wishes
+from app.routes import wishes
 
 api_router = APIRouter(
     prefix='/api/v1',
