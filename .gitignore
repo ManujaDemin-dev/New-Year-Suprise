@@ -7,3 +7,7 @@
 
 docker-compose.yml
 .DS_Store
+
+certs/
+certs-data/
+webroot/
